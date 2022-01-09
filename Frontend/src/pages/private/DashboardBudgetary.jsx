@@ -57,7 +57,7 @@ function DashboardBudgetary(props) {
 
   const drawer = (
     <div>
-      <Toolbar><span>PRESUPUESTOS</span></Toolbar>
+      <Toolbar><span>PRESUPUESTOS DE OBRA</span></Toolbar>
 
       <Divider />
       <List>
@@ -67,15 +67,6 @@ function DashboardBudgetary(props) {
           </ListItemIcon>
           <Link to="/"><ListItemText primary='Inicio' /></Link>
         </ListItem>
-
-        {/*    {['Home', 'Starred', 'Send email', 'Drafts'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
       </List>
       <Divider />
       <List>
@@ -159,16 +150,6 @@ function DashboardBudgetary(props) {
             <ListItemText primary='Agregar Material' />
           </ListItem>
         </NavLink>
-
-
-        {/*  {['All mail', 'Trash', 'Spam'].map((text, index) => (
-          <ListItem button key={text}>
-            <ListItemIcon>
-              {index % 2 === 0 ? <InboxIcon /> : <MailIcon />}
-            </ListItemIcon>
-            <ListItemText primary={text} />
-          </ListItem>
-        ))} */}
       </List>
     </div>
   );

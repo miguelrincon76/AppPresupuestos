@@ -23,15 +23,14 @@ export const Home = () => {
                             alignItems: 'center',
                         }}
                     >
-                        <div>
+                        <div align='center'>
                             <br />
                             <br />
-                            <h1 id="title">INGENIERIA S.A.</h1>
+                            <h1 id="title">APP PRESUPUESTARIO</h1>
                             <br />
                             <br />
                             <div id="icon-proyect">
                                 <img src={logo} alt="proyect icon" />
-
                             </div>
                             <br />
                             <br />
