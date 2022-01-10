@@ -4,31 +4,30 @@ import DashboardBudgetary from "../pages/private/DashboardBudgetary";
 import { Error404 } from "../pages/public/Error/Error404";
 import { Home } from "../components/Home";
 
-import { MaterialList } from "../components/budgetary/Mat-list.component.jsx";
-import { EditMaterial } from "../components/budgetary/Mat-edit.component.jsx";
-import { CreateMaterial } from "../components/budgetary/Mat-create.component.jsx";
+import { MaterialList } from "../components/budgetary/Anteriores/Mat-list.component.jsx";
+import { EditMaterial } from "../components/budgetary/Anteriores/Mat-edit.component.jsx";
+import { CreateMaterial } from "../components/budgetary/Anteriores/Mat-create.component.jsx";
 
-import { CotizacionList } from "../components/budgetary/Cot-list.component.jsx";
-import { EditCotizacion } from "../components/budgetary/Cot-edit.component.jsx";
-import { CreateCotizacion } from "../components/budgetary/Cot-create.component.jsx";
-import Screen from "../components/budgetary/Quotes/Screen";
+import { CotizacionList } from "../components/budgetary/Anteriores/Cot-list.component.jsx";
+import { EditCotizacion } from "../components/budgetary/Anteriores/Cot-edit.component.jsx";
+import { CreateCotizacion } from "../components/budgetary/Anteriores/Cot-create.component.jsx";
+import { Quotes } from "../components/budgetary/Quotes/Quotes";
 
-import ApuList from "../components/budgetary/Apu-list.component.jsx";
-import EditApu from "../components/budgetary/Apu-edit.component.jsx";
-import CreateApu from "../components/budgetary/Apu-create.component.jsx";
+import ApuList from "../components/budgetary/Anteriores/Apu-list.component.jsx";
+import EditApu from "../components/budgetary/Anteriores/Apu-edit.component.jsx";
+import CreateApu from "../components/budgetary/Anteriores/Apu-create.component.jsx";
 
-import PresupuestoList from "../components/budgetary/Pre-list.component ";
-import EditPresupuesto from "../components/budgetary/Pre-edit.component.jsx";
-import CreatePresupuesto from "../components/budgetary/Pre-create.component.jsx";
+import PresupuestoList from "../components/budgetary/Anteriores/Pre-list.component ";
+import EditPresupuesto from "../components/budgetary/Anteriores/Pre-edit.component.jsx";
+import CreatePresupuesto from "../components/budgetary/Anteriores/Pre-create.component.jsx";
 
 export const BudgetaryRoutes = () => {
   return (
     <>
       <DashboardBudgetary />
       <Routes>
-        <Route path="/home" element={<Home />} />
-
-        <Route path="/quotes" element={<Screen />} />
+        <Route path="/home" exact render={(props) => <Home {...props} />} />
+        <Route path="/quotes" element={<Quotes />} />
 
         <Route path="/cotizacion-list" element={<CotizacionList />} />
         <Route path="/edit-cotizacion/:id" element={<EditCotizacion />} />

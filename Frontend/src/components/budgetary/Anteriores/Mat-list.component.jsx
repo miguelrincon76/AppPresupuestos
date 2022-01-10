@@ -4,7 +4,7 @@ import Table from "react-bootstrap/Table";
 import MaterialTableRow from "./Mat-TableRow";
 import Container from "@mui/material/Container";
 //servicios
-import { Apiurl } from "../../services/apiusuarios";
+import { Apiurl } from "../../../services/apiusuarios";
 
 export class MaterialList extends Component {
   constructor(props) {

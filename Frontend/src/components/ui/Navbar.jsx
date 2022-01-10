@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, NavLink, useNavigate } from 'react-router-dom'
 
-export const Navbar = () => {
+export default function Navbar() {
 
     const navigate = useNavigate()
 
@@ -13,9 +13,9 @@ export const Navbar = () => {
 
     return (
         <nav className="navbar navbar-expand-sm navbar-dark bg-dark">
-            
-            <Link 
-                className="navbar-brand" 
+
+            <Link
+                className="navbar-brand"
                 to="/"
             >
                 Navegación
@@ -24,22 +24,22 @@ export const Navbar = () => {
             <div className="navbar-collapse">
                 <div className="navbar-nav">
 
-                    <NavLink 
-                        className={({isActive}) =>  'nav-item nav-link ' + (isActive? 'active' : '') } 
+                    <NavLink
+                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
                         to="/marvel"
                     >
                         Marvel
                     </NavLink>
 
                     <NavLink
-                        className={({isActive}) =>  'nav-item nav-link ' + (isActive? 'active' : '') } 
+                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
 
                         to="/dc"
                     >
                         DC
                     </NavLink>
                     <NavLink
-                        className={({isActive}) =>  'nav-item nav-link ' + (isActive? 'active' : '') } 
+                        className={({ isActive }) => 'nav-item nav-link ' + (isActive ? 'active' : '')}
 
                         to="/search"
                     >
@@ -53,9 +53,9 @@ export const Navbar = () => {
                     <span className="nav-item nav-link text-info">
                         Daniel
                     </span>
-                    <button 
+                    <button
                         className="nav-item nav-link btn"
-                        onClick={ handleLogout }
+                        onClick={handleLogout}
                     >
                         Logout
                     </button>

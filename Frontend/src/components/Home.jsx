@@ -44,10 +44,3 @@ export const Home = () => {
 }
 
 
-
-/*export default function Home() {
-    return (
-
-    );
-
-}*/

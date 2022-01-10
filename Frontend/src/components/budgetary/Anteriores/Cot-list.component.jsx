@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 import Table from 'react-bootstrap/Table';
-import logo from "../../assets/img/logo.png";
+import logo from "../../../assets/img/logo.png";
 import Button from "react-bootstrap/Button";
-import { Apiurl } from "../../services/apiusuarios";
+import { Apiurl } from "../../../services/apiusuarios";
 import CotizacionTableRow from "./Cot-TableRow";
 import Container from "@mui/material/Container";
 

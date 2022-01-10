@@ -5,7 +5,7 @@ import axios from "axios";
 import Container from "react-bootstrap/Container";
 
 //servicios
-import { Apiurl } from "../../services/apiusuarios";
+import { Apiurl } from "../../../services/apiusuarios";
 
 export class CreateCotizacion extends Component {
   constructor(props) {

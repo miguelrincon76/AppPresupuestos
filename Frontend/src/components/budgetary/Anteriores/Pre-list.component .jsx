@@ -1,6 +1,6 @@
 import React from 'react'
 import Container from "@mui/material/Container";
-import ApuList from "../budgetary/Apu-list.component";
+import ApuList from "../Anteriores/Apu-list.component";
 
 const PreListComponent = () => {
   return (

@@ -2,15 +2,13 @@ import React from 'react'
 
 import { QuoteList } from './QuoteList'
 
-const Screen = props => {
+export const Quotes = () => {
+
     return (
-        <div className='text-center'>
-            <h1>Screen</h1>
+        <div className='container' align='center' marginLeft='250px'>
+            <h1>COTIZACIONES</h1>
             <hr />
             <QuoteList proponenteId={'Grupo 06 Web 01'} />
-
         </div>
     )
 }
-
-export default Screen

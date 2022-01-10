@@ -3,7 +3,7 @@ import axios from "axios";
 import Button from "react-bootstrap/Button";
 
 //servicios
-import { Apiurl } from "../../services/apiusuarios";
+import { Apiurl } from "../../../services/apiusuarios";
 
 export default class CotizacionTableRow extends Component {
   constructor(props) {

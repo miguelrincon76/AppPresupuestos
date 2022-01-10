@@ -2,15 +2,13 @@ import React, { Component } from "react";
 import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 import axios from "axios";
-import Container from "react-bootstrap/Container";
-
 //servicios
-import { Apiurl } from "../../services/apiusuarios";
+import { Apiurl } from "../../../services/apiusuarios";
+import Container from "@mui/material/Container";
 
-export class CreateMaterial extends Component {
+export class EditMaterial extends Component {
   constructor(props) {
     super(props);
-
     // Setting up functions
     this.onChangeMaterialMaterialId =
       this.onChangeMaterialMaterialId.bind(this);
@@ -29,6 +27,24 @@ export class CreateMaterial extends Component {
       unidad: "",
       valorunit: 0,
     };
+  }
+
+  componentDidMount() {
+    let url = Apiurl + "/materiales/edit-material/";
+    axios
+      .get(url + this.props.match.params.id)
+      .then((res) => {
+        this.setState({
+          materialId: res.data.materialId,
+          codigo: res.data.codigo,
+          descripcion: res.data.descripcion,
+          unidad: res.data.unidad,
+          valorunit: res.data.valorunit,
+        });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
   }
 
   onChangeMaterialMaterialId(e) {
@@ -61,8 +77,16 @@ export class CreateMaterial extends Component {
       unidad: this.state.unidad,
       valorunit: this.state.valorunit,
     };
-    let url = Apiurl + "/materiales/create-material";
-    axios.post(url, materialObject).then((res) => console.log(res.data));
+    let url = Apiurl + "/materiales/update-material/";
+    axios
+      .put(url + this.props.match.params.id, materialObject)
+      .then((res) => {
+        console.log(res.data);
+        console.log("Material successfully updated");
+      })
+      .catch((error) => {
+        console.log(error);
+      });
 
     // Redirect to Material List
     this.props.history.push("/material-list");
@@ -115,8 +139,9 @@ export class CreateMaterial extends Component {
                 onChange={this.onChangeMaterialValorunit}
               />
             </Form.Group>
+
             <Button variant="danger" size="lg" block="block" type="submit">
-              Crear Materiales
+              Actualizar Material
             </Button>
           </Form>
         </div>
