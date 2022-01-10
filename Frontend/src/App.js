@@ -22,9 +22,6 @@ function App() {
 
   return (
     <div className="App">
-      <br></br>
-      <br /> <br />
-      <Headers />
       <AuthContext.Provider value={{ user, dispatch }}>
         <AppRouter />
       </AuthContext.Provider>

@@ -14,17 +14,14 @@ export const QuoteList = ({ proponenteId }) => {
 
     return (
         <div
-            className='container'
-            component="main"
-            maxwidth="lg"
+            className='container-fluid'
             align='center'
             style={{ border: '1px solid gray', backgroundColor: 'white' }}
         >
             <br />
             <h1 id="title">INGENIERIA S.A.</h1>
             <h2 id="title">Cuadro de Cotización</h2>
-            <br />
-            <br />
+            <br /><br />
             <div id="icon-proyect">
                 <img src={logo} alt="proyect icon" />
             </div>
@@ -36,7 +33,6 @@ export const QuoteList = ({ proponenteId }) => {
                     <button className="btn btn-outline-primary">CARGAR ARCHIVO CANTIDADES</button>{' '}
                     <button className="btn btn-outline-secondary">EDICIÓN</button>{' '}
                 </div>
-                <br />
                 <br />
                 <table className='table table-bordered table-hover table-striped table-active'>
                     <thead>

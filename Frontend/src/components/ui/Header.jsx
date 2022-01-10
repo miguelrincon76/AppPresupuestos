@@ -10,10 +10,10 @@ export default function Header() {
                 <Container>
                     <Navbar.Brand href="/">Ingenieria S.A.</Navbar.Brand>
                     <Nav className="me-auto">
-                        <Nav.Link href="/dashboard">Dashboard</Nav.Link>
+                        <Nav.Link href="/">Inicio</Nav.Link>
                         <Nav.Link href="/cotizacion-list">Cotizaciones</Nav.Link>
-                        <Nav.Link href="/presupuesto">Presupuestos</Nav.Link>
-                        <Nav.Link href="/apu">APU's</Nav.Link>
+                        <Nav.Link href="/presupuesto-list">Presupuestos</Nav.Link>
+                        <Nav.Link href="/apu-list">APU's</Nav.Link>
                         <Nav.Link href="/material-list">Materiales</Nav.Link>
                     </Nav>
                 </Container>

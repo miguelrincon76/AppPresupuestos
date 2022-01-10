@@ -5,10 +5,14 @@ import { QuoteList } from './QuoteList'
 export const Quotes = () => {
 
     return (
-        <div className='container' align='center' marginLeft='250px'>
+        <div
+            className='container-fluid me-4'
+            align='center'
+
+        >
             <h1>COTIZACIONES</h1>
             <hr />
             <QuoteList proponenteId={'Grupo 06 Web 01'} />
-        </div>
+        </div >
     )
 }
